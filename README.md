@@ -1,6 +1,12 @@
 # Segment Time Predictor
 
-A simple and elegant web app that predicts the estimated time to complete a cycling segment based on key parameters. Built with HTML, CSS, and JavaScript, this tool uses a pre-trained linear regression model to provide instant predictions and a confidence interval.
+A simple web app that predicts the estimated time to complete a cycling segment based on key parameters. Built with HTML, CSS, and JavaScript, this tool uses a pre-trained linear regression model to provide instant predictions and a confidence interval.
+
+## 🌐 Hosting
+
+This website is hosted using Github Pages:
+
+- Link: https://emaeusepi.github.io/Strava_segment_time_predictor/
 
 ## 🚴 Features
 
@@ -33,14 +39,7 @@ The app uses a linear regression model pre-calculated by preprocessing several s
 3. Fill in the segment details.
 4. Click **Predict Time** to see the estimated time and interval.
 
-## 🌐 Hosting
 
-You can host this project easily using https://pages.github.com/:
-
-1. Push the files to a GitHub repository.
-2. Go to **Settings > Pages**.
-3. Select the branch and root folder.
-4. Your site will be live!
 
 
 
