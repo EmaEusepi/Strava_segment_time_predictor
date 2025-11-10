@@ -16,9 +16,9 @@ This website is hosted using Github Pages:
   - Average Grade (%)
   - Max Grade (%)
   - Elevation Gain (meters)
-  - Leader VAM (m/h)
 - Instant prediction of segment time (in minutes and seconds)
 - Estimated time range with ±5% interval
+- Automatically calculated VAM
 - Responsive and visually appealing design
 - Fully client-side — no training or server required
 

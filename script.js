@@ -7,9 +7,12 @@ document.getElementById("predictForm").addEventListener("submit", function (e) {
     const grade = parseFloat(document.getElementById("avgGrade").value);
     const maxGrade = parseFloat(document.getElementById("maxGrade").value);
     const elv = parseFloat(document.getElementById("elevation").value);
-    const vam = parseFloat(document.getElementById("vam").value);
 
-    const komTime = komMin * 60 + komSec;
+    const komTime = komMin * 60 + komSec
+    const komTimeHours = komTime / 3600;
+
+    // Calcolo VAM automatico
+    const vam = elv / komTimeHours;
 
     const coeffs = [0.05758575, 1.25607924, 5.91841378, -0.74136877, 0.68511179, -0.00818158];
     const intercept = 7.519707180297019;
