@@ -1,21 +1,45 @@
+
+// Coefficients and intercepts for each user
+const modelParams = {
+  EE: {
+    coeffs: [0.05758575, 1.25607924, 5.91841378, -0.74136877, 0.68511179, -0.00818158],
+    intercept: 7.519707180297019
+  },
+  LM: {
+    coeffs: [0.05758575, 1.23, 5, -0.74136877, 0.68511179, -0.00818158],
+    intercept: 7.519707180297019
+  },
+  SD: {
+    coeffs: [0.05758575, 1.1, 1.9, -0.74136877, 0.3, -0.00818158],
+    intercept: 7.519707180297019
+  }
+};
+
+
 document.getElementById("predictForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
+    //inputs
     const dist = parseFloat(document.getElementById("distance").value);
     const komMin = parseFloat(document.getElementById("komMin").value);
     const komSec = parseFloat(document.getElementById("komSec").value);
     const grade = parseFloat(document.getElementById("avgGrade").value);
     const maxGrade = parseFloat(document.getElementById("maxGrade").value);
     const elv = parseFloat(document.getElementById("elevation").value);
+    const user = document.getElementById("user").value;
 
+    // Calcoli
     const komTime = komMin * 60 + komSec
     const komTimeHours = komTime / 3600;
-
-    // Calcolo VAM automatico
     const vam = elv / komTimeHours;
 
-    const coeffs = [0.05758575, 1.25607924, 5.91841378, -0.74136877, 0.68511179, -0.00818158];
-    const intercept = 7.519707180297019;
+    //const coeffs = [0.05758575, 1.25607924, 5.91841378, -0.74136877, 0.68511179, -0.00818158];
+    //const intercept = 7.519707180297019;
+
+    
+    // Get coefficients and intercept for selected user
+    const { coeffs, intercept } = modelParams[user];
+
 
     const predictedTimeSec =
     coeffs[0] * dist +
